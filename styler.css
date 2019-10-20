@@ -40,6 +40,31 @@
 }
 
 
+#card {
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.front {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+
+
+
+
+
+
 @media (max-width:499px) {
     .callout-container {
         background-position-y: 85px;
