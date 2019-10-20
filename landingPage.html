@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="styler.css" type="text/css">
+
     <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Dancing+Script|Luckiest+Guy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: 'Luckiest Guy', cursive;
-            font-size: 28px;
-            overflow-x: hidden;
-        }
-        html {
-                scroll-behavior: smooth;
-            }
+        
     </style>
 
     <title>MEMO</title>
@@ -29,115 +23,28 @@
 <body>
     <!---------------------------------------------------------------------- Nav bar -->
     <nav class="navbar navbar-light navbar-expand-sm bg-light">
-        <!-- <a href="/" class="navbar-brand">Whiskey Drop</a> -->
-        <a href="index.html" class="navbar-brand"><img src="./visuals/memologo5.png" alt="" height="90"></a>
+        <a href="landingPage.html" class="navbar-brand"><img src="./visuals/memologo5.png" alt="" height="90" ></a>
         <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="active nav-item mr-2"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item mr-2"><a class="nav-link" href="#music">Music</a></li>
-                <li class="nav-item mr-2"><a class="nav-link" href="#gigs">Gigs</a></li>
-                <li class="nav-item mr-2"><a class="nav-link" href="#bottom">Updates</a></li>
                 <li class="nav-item mr-2"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="#music">Decks</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="#gigs">Quiz</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="#bottom">Updates</a></li>
                 <!-- <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="">Sign In / Sign Up</a></li> -->
             </ul>
         </div>
     </nav>
-    
+
     <!---------------------------------------------------------------------- Callout -->
     <div class="container-fluid callout-container">
-        <div class="opaque-overlay callout-background">&nbsp;</div>
+        <div class="opaque-overlay">&nbsp;</div>
     </div>
-    <!---------------------------------------------------------------------- /.callout -->
-    <!---------------------------------------------------------------------- Music -->
-    <div class="container-fluid music-container" id="music">
-        <div class="opaque-overlay contact-background">&nbsp;</div>
-        <section class="music text-center">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-uppercase my-3">Discography</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="music">
-                        <h3 class="my-4" style="margin-bottom:0px;">You Bring Summer</h3>
-                        <iframe height="300" src="https://www.youtube.com/embed/n_D6XNpYxdU"></iframe>
-                    </div>
-                </div>
-                <div class="col-12 d-md-none d-lg-block col-lg-4">
-                    <div class="music">
-                        <h3 class="my-4">A Better World</h3>
-                        <iframe height="300" src="https://www.youtube.com/embed/UvhH_pbzLqY"></iframe>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="music">
-                        <h3 class="my-4">Me & Magdalena</h3>
-                        <iframe height="300" src="https://www.youtube.com/embed/FfruDTmFDUA"></iframe></div>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-12 my-5">
-                <p class="text-center"><button type="button" class="btn btn-danger"><a href="music.html" style="color: #ffffff; text-decoration: none; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black;"><strong>More</strong></button></p>
-            </div>
-        </section>
-    </div>
-    <!---------------------------------------------------------------------- /.music -->
-    <!---------------------------------------------------------------------- Live-->
-    <div class="container-fluid live-container" id="gigs">
 
-        <section class="live text-center ">
-            <section class="jumbotron">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-uppercase my-5 mx-auto">Listen Live</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="live">
-                            <button type="button" class="btn btn-warning"><a href="gigs.html#gigstop" style="color: #ffffff; text-decoration: none; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black;"><strong>Tours</strong></a></button>
-                            <hr>
-                            <button type="button" class="btn btn-warning"><a href="gigs.html#gigsbottom" class="landingButtons" style="color: #ffffff; text-decoration: none; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black;"><strong>Book us</strong></a></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-    </div>
-    <!---------------------------------------------------------------------- /.live -->
-    <!---------------------------------------------------------------------- Contact-->
-    <div class="container-fluid contact-container" id="bottom">
-        <div class="opaque-overlay contact-background">&nbsp;</div>
-        <section class="contact text-center">
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-uppercase touchLP" style="color:#ffff">Keep in touch</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-12">
-                    <div class="wrapper" style="z-index:5;">
-                        <a href="https://www.facebook.com/TheMonkees/"><i class="fa fa-3x fa-facebook-square"></i></a>
-                        <a href="https://www.instagram.com/themonkees/?hl=en"><i class="fa fa-3x fa-instagram"></i></a>
-                        <a href="https://www.pinterest.com/kathrynfremo/the-monkees/"><i class="fa fa-3x fa-pinterest"></i></a>
-                        <a href="https://twitter.com/themonkees?lang=en"><i class="fa fa-3x fa-twitter-square"></i></a>
-                    </div>
-                </div>
-            </div>
-    </div>
-    </div>
-    </section>
-    </div>
-    <!---------------------------------------------------------------------- /.contact-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!---------------------------------------------------------------------- /.callout -->
+
 </body>
 
 </html>
