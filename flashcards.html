@@ -12,11 +12,12 @@
 
     <!-- Font-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-    
+
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="programming.js"></script>
+    <!--Farah's edit -->
 
 
     <style>
@@ -27,14 +28,57 @@
 </head>
 
 <body>
-
-    <button id="left">y</button>
-    <button id="right">x</button>
-
-    <div id="card" style="position: absolute; left: 30%; top: 30%;">
-        <div class="front">Front content</div>
-        <div class="back">Back content</div>
+    <!-- Navigation bar ------------------------------------------------------->
+    <nav class="navbar navbar-light navbar-expand-sm bg-light">
+        <a href="landingPage.html" class="navbar-brand"><img src="./visuals/memologo5.png" alt="" height="90" ></a>
+        <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="active nav-item mr-2"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="#music">Decks</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="#gigs">Quiz</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="#bottom">Updates</a></li>
+                <!-- <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="">Sign In / Sign Up</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- Page content ------------------------------------------------------->
+    <div class="row">
+        <div class="col-12">
+            <div class="navBarspacer"></div>
+        </div>
     </div>
+
+    <div class="row">
+        <div class="col-4" style="text-align: center;">
+            <div class="navArrowspacer"></div>
+            <a class="pointer" onclick="click_updatesCounterLEFT()"><img src="./visuals/blue_L.png"></a>
+        </div>
+        <!-- Flashcard ------------------------------------------------------->
+        <div class="col-4">
+            <div id="card" style="position: fixed; left: 0%; bottom: 0%; text-align: center;">
+                <div id="right">
+                    <div class="front">niveau</div>
+                    <div class="back">level</div>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard ------------------------------------------------------->
+        <div class="col-4" style="text-align: center;">
+            <div class="navArrowspacer"></div>
+            <a class="pointer" onclick="click_updatesCounter()"><img src="./visuals/red_R.png"></a>
+        </div>
+    </div>
+    <!-- Progress counter ------------------------------------------------------->
+    <div class="row">
+        <div class="col-12 my-5" style="text-align: center;">
+            <div class="navArrowspacer"></div>
+            <p id="demo">1 out of 10</p>
+        </div>
+    </div>
+
 
 
 

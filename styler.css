@@ -44,26 +44,30 @@
     position: fixed;
     left: 50px;
     top: 50px;
-    width: 200px;
-    height: 200px;
+    /*width: 200px;
+    height: 200px;*/
 }
 
 .front {
-    width: 100%;
-    height: 100%;
+    width: 435px !important;
+    height: 300px !important;
     background-color: red;
 }
 
 .back {
-    width: 100%;
-    height: 100%;
+    width: 435px !important;
+    height: 300px !important;
     background-color: yellow;
 }
 
 
+.navBarspacer {
+    height: 25vh;
+}
 
-
-
+.pointer {
+    cursor: pointer;
+}
 
 @media (max-width:499px) {
     .callout-container {
@@ -95,5 +99,9 @@
     body {
         font-family: 'Ubuntu', sans-serif;
         font-size: 33px;
+    }
+
+    .navArrowspacer {
+        height: 40%;
     }
 }
