@@ -51,13 +51,13 @@
 .front {
     width: 435px !important;
     height: 300px !important;
-    background-color: red;
+    background-color: #C8F4F9;
 }
 
 .back {
     width: 435px !important;
     height: 300px !important;
-    background-color: yellow;
+    background-color: #E9EAE0;
 }
 
 
@@ -67,6 +67,12 @@
 
 .pointer {
     cursor: pointer;
+}
+
+.middle_centre {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media (max-width:499px) {
