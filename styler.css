@@ -60,6 +60,13 @@
     background-color: #E9EAE0;
 }
 
+.optionfront {
+    width: 290px !important;
+    height: 200px !important;
+    background-color: #C8F4F9;
+}
+
+
 
 .navBarspacer {
     height: 25vh;
@@ -111,3 +118,5 @@
         height: 40%;
     }
 }
+
+

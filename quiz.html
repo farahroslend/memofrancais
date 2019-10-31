@@ -50,27 +50,57 @@
             <div class="navBarspacer"></div>
         </div>
     </div>
-
     <div class="row">
-        <div class="col-4" style="text-align: center;">
-            <div class="navArrowspacer"></div>
-            <a class="pointer" onclick="click_updatesCounterLEFT()"><img src="./visuals/blue_L.png"></a>
+        <div class="col-12 my-3" style="text-align: center;">
+            <h1 id="FlashcardFront">niveau</h1>
         </div>
-        <!-- Flashcard ------------------------------------------------------->
-        <div class="col-4">
-            <div id="card" style="position: fixed; left: 0%; bottom: 0%; text-align: center;">
-                <div class="pointer" id="right">
-                    <div class="front"><p class="middle_centre" id="FlashcardFront">niveau</p></div>
-                    <div class="back"><p class="middle_centre" id="FlashcardBack">level</p></div>
-                </div>
+    </div>
+    <!-- Options (A,B) ------------------------------------------------------->
+    <div class="row">
+        <style>
+            #outer-div {
+                width: 100%;
+                text-align: center;
+                background-color: white;
+            }
+
+            #inner-div {
+                display: inline-block;
+                margin: 0 auto;
+                padding: 3px;
+                background-color: #E9EAE0;
+            }
+        </style>
+        <div class="col-3">
+        </div>
+        <div id="outer-div" class="col-3">
+            <div id="inner-div" class="pointer optionfront my-2" style="text-align: center;">
+                <p class="middle_centre" id="optionA">level</p>
             </div>
         </div>
-        <!-- Flashcard ------------------------------------------------------->
-        <div class="col-4" style="text-align: center;">
+        <div id="outer-div" class="col-3">
+            <div id="inner-div" class="pointer optionfront my-2" style="text-align: center;">
+                <p class="middle_centre" id="optionB">salt</p>
+            </div>
+        </div>
+        <!-- moving on arrow ------------------------------------------------------->
+        <div class="col-3" style="text-align:">
             <div class="navArrowspacer"></div>
             <a class="pointer" onclick="click_updatesCounter()"><img src="./visuals/red_R.png"></a>
         </div>
     </div>
+    <!-- verdict ------------------------------------------------------->
+    <div class="row">
+        <div class="col-3"></div>
+        <div id="" class="col-3" style="text-align: center;">
+            <p id="" style="color:white">salt</p>
+        </div>
+        <div id="" class="col-3" style="text-align: center;">
+            <p id="" style="color:white">salt</p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
     <!-- Progress counter ------------------------------------------------------->
     <div class="row">
         <div class="col-12 my-5" style="text-align: center;">
@@ -78,6 +108,7 @@
             <p id="demo">1 out of 20</p>
         </div>
     </div>
+
 
 </body>
 
