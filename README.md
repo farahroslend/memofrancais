@@ -58,7 +58,8 @@ HTML / CSS | 5/10
 - [JSHint](https://jshint.com/) -- Javascript proofing.
 
 ## **Deployment**
-Project is published and browsable via (https://farahroslend.github.io/memofrancais/)
+Project is published and browsable via https://farahroslend.github.io/memofrancais/
 
 
-
+## **Credits**
+Thanks to MicroslavSvec for README.md write up tips, Narender my mentor for his support and MIT for creating and making Bootstrap and JQuery an open source.
