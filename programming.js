@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 // Flashcard navigation counter and content update
 
-function click_updatesCounter() {
+function click_updatesCounterRIGHT() {
  // set currentCounter variable to the contents of "counter" or 1 if "counter" doesn't exist yet
  let currentCounter = sessionStorage.getItem("counter") || 1;
  // increment currentCounter and store it in sessionStorage with the name "counter"
@@ -68,6 +68,8 @@ function click_updatesCounterLEFT() {
  var myArrayBack = ["level", "speed", "sample", "target", "cost", "breakdown", "fire", "signal", "off spec", "flowrate", "heavy (distillation)", "light (distillation)", "valve", "safety valve", "tube side", "shell", "rate", "bed", "residence time", "salt"];
  var indexForFlashcardBack = currentCounter - 1;
  document.getElementById("FlashcardBack").innerHTML = myArrayBack[indexForFlashcardBack];
+
+
 }
 
 
@@ -76,6 +78,17 @@ function click_updatesCounterLEFT() {
 //Changing the content for the options
 
 function click_updatesCounter() {
+
+ //clear format response to answer in Option A
+ document.getElementById("inner-div").style.backgroundColor = "#E9EAE0";
+ document.getElementById("optionAVerdictComment").innerHTML = " ";
+ document.getElementById("optionAVerdictComment").style.color = "#fffff";
+
+ //clear format response to answer in Option B
+ document.getElementById("inner-divB").style.backgroundColor = "#E9EAE0";
+ document.getElementById("optionBVerdictComment").innerHTML = " ";
+ document.getElementById("optionBVerdictComment").style.color = "#fffff";
+
  // set currentCounter variable to the contents of "counter" or 1 if "counter" doesn't exist yet
  let currentCounter = sessionStorage.getItem("counter") || 1;
  // increment currentCounter and store it in sessionStorage with the name "counter"
@@ -140,14 +153,14 @@ function optionASelectedtest() {
 
 function optionASelected() {
  var myArrayBack = ["level", "speed", "sample", "target", "cost", "breakdown", "fire", "signal", "off spec", "flowrate", "heavy (distillation)", "light (distillation)", "valve", "safety valve", "tube side", "shell", "rate", "bed", "residence time", "salt"];
- 
+
  if (document.getElementById("FlashcardFront").innerHTML == "niveau") {
-  var currentCounter=1;
+  var currentCounter = 1;
  }
- else{
- var currentCounter = sessionStorage.getItem("counter") || 1;
+ else {
+  var currentCounter = sessionStorage.getItem("counter") || 1;
  }
- 
+
  var tried = false;
  var Ainput = document.getElementById("optionA").innerHTML;
  var correctAnswer = myArrayBack[currentCounter - 1];
@@ -155,7 +168,6 @@ function optionASelected() {
  if (tried == false) {
   var tried = true;
   if (result == 0) {
-
    //adjust format response to correct answer in Option A
    document.getElementById("inner-div").style.backgroundColor = "#77DD77";
    document.getElementById("optionAVerdictComment").innerHTML = "C'est exact!";
@@ -171,12 +183,63 @@ function optionASelected() {
    sessionStorage.setItem("scoreRecord", ++scoreRight);
   }
   else {
-   document.getElementById("optionA").innerHTML = result + myArrayBack[currentCounter - 1] + Ainput + currentCounter;
+   //adjust format response to wrong answer in Option A
+   document.getElementById("inner-div").style.backgroundColor = "#FF6961";
+   document.getElementById("optionAVerdictComment").innerHTML = "Non";
+   document.getElementById("optionAVerdictComment").style.color = "#FF6961";
+   //document.getElementById("optionA").innerHTML = result + myArrayBack[currentCounter - 1] + Ainput + currentCounter;
   }
  }
 
  else {
   //do nothing
  }
-sessionStorage.setItem("counter", ++currentCounter);
+
+}
+
+function optionBSelected() {
+ var myArrayBack = ["level", "speed", "sample", "target", "cost", "breakdown", "fire", "signal", "off spec", "flowrate", "heavy (distillation)", "light (distillation)", "valve", "safety valve", "tube side", "shell", "rate", "bed", "residence time", "salt"];
+
+ if (document.getElementById("FlashcardFront").innerHTML == "niveau") {
+  var currentCounter = 1;
+ }
+ else {
+  var currentCounter = sessionStorage.getItem("counter") || 1;
+ }
+
+ var tried = false;
+ //Option B selected 
+ var Binput = document.getElementById("optionB").innerHTML;
+ var correctAnswer = myArrayBack[currentCounter - 1];
+ var result = Binput.localeCompare(correctAnswer);
+ if (tried == false) {
+  var tried = true;
+  if (result == 0) {
+   //adjust format response to correct answer in Option B
+   document.getElementById("inner-divB").style.backgroundColor = "#77DD77";
+   document.getElementById("optionBVerdictComment").innerHTML = "C'est exact!";
+   document.getElementById("optionBVerdictComment").style.color = "#77DD77";
+
+   var div = document.getElementById('optionBBox');
+   div.onclick = function() {
+    this.style.backgroundColor = 'green';
+   };
+
+   // Give a point to the correct response in Option B
+   let scoreRight = sessionStorage.getItem("scoreRecord") || 0;
+   sessionStorage.setItem("scoreRecord", ++scoreRight);
+  }
+  else {
+   //adjust format response to wrong answer in Option B
+   document.getElementById("inner-divB").style.backgroundColor = "#FF6961";
+   document.getElementById("optionBVerdictComment").innerHTML = "Non";
+   document.getElementById("optionBVerdictComment").style.color = "#FF6961";
+   //document.getElementById("optionA").innerHTML = result + myArrayBack[currentCounter - 1] + Ainput + currentCounter;
+  }
+ }
+
+ else {
+  //do nothing
+ }
+
 }
