@@ -71,46 +71,9 @@ function click_updatesCounterLEFT() {
 }
 
 
-//Flipping the flashcards on y-axis
-
-/*var ax = 'y';
-$(document).ready(function() {
- 
- $('#card').flip({
-  trigger: 'manual',
-  axis: 'y'
- });
- 
- $('#right').click(function() {
-  if (ax != 'y') {
-   $("#card").flip({
-    axis: 'y'
-   });
-   ax = 'y';
-  }
-  else {
-   $("#card").flip('toggle');
-  }
- });
- 
-});*/
-
-
 //JS codes for quiz
-var myArrayBack = ["level", "speed", "sample", "target", "cost", "breakdown", "fire", "signal", "off spec", "flowrate", "heavy (distillation)", "light (distillation)", "valve", "safety valve", "tube side", "shell", "rate", "bed", "residence time", "salt"];
-var correctOptionPlacer = Math.round(Math.random());
-if (correctOptionPlacer = 1) {
- document.getElementById("optionA").innerHTML = myArrayBack[currentCounter];
- var wrongoptionIndex = (20 + 1) - currentCounter;
- document.getElementById("optionB").innerHTML = myArrayBack[wrongoptionIndex];
-}
-else {
- document.getElementById("optionB").innerHTML = myArrayBack[currentCounter];
- var wrongoptionIndex = (20 + 1) - currentCounter;
- document.getElementById("optionA").innerHTML = myArrayBack[wrongoptionIndex];
-}
 
-//the real codes for Quiz
+//Changing the content for the options
 
 function click_updatesCounter() {
  // set currentCounter variable to the contents of "counter" or 1 if "counter" doesn't exist yet
@@ -164,4 +127,56 @@ function click_updatesCounter() {
   }
 
  }
+}
+
+//Response for user's answer
+
+function optionASelectedtest() {
+ //document.getElementById("optionA").innerHTML = "testttt colour";
+ //document.getElementById("optionABox").style.color = "red";
+ document.getElementById("inner-div").style.backgroundColor = "#ff0000";
+
+}
+
+function optionASelected() {
+ var myArrayBack = ["level", "speed", "sample", "target", "cost", "breakdown", "fire", "signal", "off spec", "flowrate", "heavy (distillation)", "light (distillation)", "valve", "safety valve", "tube side", "shell", "rate", "bed", "residence time", "salt"];
+ 
+ if (document.getElementById("FlashcardFront").innerHTML == "niveau") {
+  var currentCounter=1;
+ }
+ else{
+ var currentCounter = sessionStorage.getItem("counter") || 1;
+ }
+ 
+ var tried = false;
+ var Ainput = document.getElementById("optionA").innerHTML;
+ var correctAnswer = myArrayBack[currentCounter - 1];
+ var result = Ainput.localeCompare(correctAnswer);
+ if (tried == false) {
+  var tried = true;
+  if (result == 0) {
+
+   //adjust format response to correct answer in Option A
+   document.getElementById("inner-div").style.backgroundColor = "#77DD77";
+   document.getElementById("optionAVerdictComment").innerHTML = "C'est exact!";
+   document.getElementById("optionAVerdictComment").style.color = "#77DD77";
+
+   var div = document.getElementById('optionABox');
+   div.onclick = function() {
+    this.style.backgroundColor = 'green';
+   };
+
+   // Give a point to the correct response in Option A
+   let scoreRight = sessionStorage.getItem("scoreRecord") || 0;
+   sessionStorage.setItem("scoreRecord", ++scoreRight);
+  }
+  else {
+   document.getElementById("optionA").innerHTML = result + myArrayBack[currentCounter - 1] + Ainput + currentCounter;
+  }
+ }
+
+ else {
+  //do nothing
+ }
+sessionStorage.setItem("counter", ++currentCounter);
 }

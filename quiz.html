@@ -70,12 +70,16 @@
                 padding: 3px;
                 background-color: #E9EAE0;
             }
+
+            #optionABox {
+                background-color: #C8F4F9;
+            }
         </style>
         <div class="col-3">
         </div>
         <div id="outer-div" class="col-3">
-            <div id="inner-div" class="pointer optionfront my-2" style="text-align: center;">
-                <p class="middle_centre" id="optionA">level</p>
+            <div id="inner-div" onclick="optionASelected()" class="pointer optionfront my-2" style="text-align: center;">
+                <p class="middle_centre optionABox" id="optionA" onclick="optionASelected()">level</p>
             </div>
         </div>
         <div id="outer-div" class="col-3">
@@ -93,7 +97,7 @@
     <div class="row">
         <div class="col-3"></div>
         <div id="" class="col-3" style="text-align: center;">
-            <p id="" style="color:white">salt</p>
+            <p id="optionAVerdictComment"></p>
         </div>
         <div id="" class="col-3" style="text-align: center;">
             <p id="" style="color:white">salt</p>
